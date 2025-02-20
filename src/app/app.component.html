@@ -1,0 +1,255 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="logo">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/2048px-BMW.svg.png" alt="BMW Logo">
+  </div>
+  <div class="nav-links">
+    <a (click)="scrollToSection('home')" href="#home">Home</a>
+    <a (click)="scrollToSection('about')" href="#about">About</a>
+    <a (click)="scrollToSection('models')" href="#models">Models</a>
+    <a (click)="scrollToSection('innovation')" href="#innovation">Innovation</a>
+    <a (click)="scrollToSection('contact')" href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero-section">
+  <img src="/images/dmitry-timofeew-UU18rjWiQmo-unsplash.jpg" alt="BMW Hero Background" class="hero-bg">
+  <div class="hero-text">
+    <h1>THE NEW BMW SERIES</h1>
+    <p>Experience the Ultimate Driving Machine</p>
+    <button class="hero-button">DISCOVER MORE</button>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about-section">
+  <h2>About BMW</h2>
+  <div class="about-content">
+    <div class="about-text">
+      <h3>Our Heritage</h3>
+      <p>Since 1916, BMW has been the symbol of automotive excellence, innovation, and luxury. From aircraft engines to the ultimate driving machines of today, our journey has been driven by passion and precision.</p>
+    </div>
+    <div class="about-stats">
+      <div class="stat-item">
+        <span class="number">100+</span>
+        <p>Years of Excellence</p>
+      </div>
+      <div class="stat-item">
+        <span class="number">140+</span>
+        <p>Countries</p>
+      </div>
+      <div class="stat-item">
+        <span class="number">2.5M+</span>
+        <p>Cars Sold Annually</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Models Section -->
+<section id="models" class="models-section">
+  <h2>Featured Models</h2>
+  <div class="models-grid">
+    <div class="model-card">
+      <img src="/images/x5.jpeg" alt="BMW X5">
+      <div class="model-info">
+        <h3>BMW X5</h3>
+        <p>Starting from $65,000</p>
+        <ul>
+          <li>✓ 456 Horsepower</li>
+          <li>✓ 0-60 mph in 4.1s</li>
+          <li>✓ All-Wheel Drive</li>
+        </ul>
+        <button class="learn-more">Learn More</button>
+      </div>
+    </div>
+
+    <div class="model-card">
+      <img src="/images/m3.jpeg" alt="BMW M3">
+      <div class="model-info">
+        <h3>BMW M3</h3>
+        <p>Starting from $72,000</p>
+        <ul>
+          <li>✓ 503 Horsepower</li>
+          <li>✓ 0-60 mph in 3.8s</li>
+          <li>✓ Track-Ready</li>
+        </ul>
+        <button class="learn-more">Learn More</button>
+      </div>
+    </div>
+
+    <div class="model-card">
+      <img src="/images/i4.jpeg" alt="BMW i4">
+      <div class="model-info">
+        <h3>BMW i4</h3>
+        <p>Starting from $55,000</p>
+        <ul>
+          <li>✓ Electric Power</li>
+          <li>✓ 300 Mile Range</li>
+          <li>✓ Fast Charging</li>
+        </ul>
+        <button class="learn-more">Learn More</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Innovation Section -->
+<section id="innovation" class="innovation-section">
+  <h2>Innovation & Technology</h2>
+  <div class="innovation-grid">
+    <div class="innovation-card">
+      <img src="/images/tyler-clemmensen-wLpTPp2dzsY-unsplash.jpg" alt="Electric">
+      <h3>Electric Mobility</h3>
+      <p>Discover our electric future</p>
+    </div>
+    <div class="innovation-card">
+      <img src="/images/2019 BMW X5 SUV starts at $60,700.jpeg" alt="Design">
+      <h3>Design</h3>
+      <p>Crafted to perfection</p>
+    </div>
+    <div class="innovation-card">
+      <img src="/images/jakob-rosen-IyuXfY_i7tA-unsplash.jpg" alt="Performance">
+      <h3>Performance</h3>
+      <p>Power meets precision</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+  <h2>Contact Us</h2>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <h3>Get in Touch</h3>
+      <p>We're here to help with any questions about our vehicles</p>
+      <div class="contact-details">
+        <p><strong>Phone:</strong> 1-800-BMW-CARS</p>
+        <p><strong>Email:</strong> info&#64;bmw.com</p>
+        <p><strong>Address:</strong> BMW Headquarters, Munich, Germany</p>
+      </div>
+      <div class="social-links">
+        <a href="#" class="social-link">Facebook</a>
+        <a href="#" class="social-link">Instagram</a>
+        <a href="#" class="social-link">Twitter</a>
+      </div>
+    </div>
+    <div class="contact-form">
+      <h3>Send us a Message</h3>
+      <form (submit)="onSubmit($event)">
+        <div class="form-group">
+          <input type="text" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <select required>
+            <option value="">Select Model</option>
+            <option value="x5">BMW X5</option>
+            <option value="m3">BMW M3</option>
+            <option value="i4">BMW i4</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <textarea placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="submit-button">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-grid">
+      <!-- Brand Section -->
+      <div class="footer-brand">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/2048px-BMW.svg.png" alt="BMW Logo" class="footer-logo">
+        <p>The Ultimate Driving Machine</p>
+        <div class="social-icons">
+          <a href="#" class="social-icon">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="social-icon">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="social-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="social-icon">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#models">Models</a></li>
+          <li><a href="#innovation">Innovation</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Models -->
+      <div class="footer-links">
+        <h4>Models</h4>
+        <ul>
+          <li><a href="#">BMW X5</a></li>
+          <li><a href="#">BMW M3</a></li>
+          <li><a href="#">BMW i4</a></li>
+          <li><a href="#">BMW 7 Series</a></li>
+          <li><a href="#">View All Models</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-contact">
+        <h4>Contact Info</h4>
+        <ul>
+          <li>
+            <i class="fas fa-map-marker-alt"></i>
+            BMW Headquarters, Munich, Germany
+          </li>
+          <li>
+            <i class="fas fa-phone"></i>
+            1-800-BMW-CARS
+          </li>
+          <li>
+            <i class="fas fa-envelope"></i>
+            info&#64;bmw.com
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+      <h4>Subscribe to Our Newsletter</h4>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Enter your email">
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <div class="copyright">
+        <p>&copy; 2024 BMW. All Rights Reserved.</p>
+      </div>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Settings</a>
+      </div>
+    </div>
+  </div>
+</footer>
