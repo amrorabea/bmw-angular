@@ -1,0 +1,43 @@
+# Angular build output
+/dist
+/tmp
+/out-tsc
+
+# Node modules
+/node_modules
+
+# IDE and editor files
+/.idea
+/.vscode
+/.project
+/.settings
+/.classpath
+/.DS_Store
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+/.env
+/.env.local
+/.env.*.local
+
+# Compiled output
+*.js
+*.map
+
+# Miscellaneous
+*.tgz
+*.lock
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+
+# Coverage directory used by tools like istanbul
+/coverage
+
+# Angular specific
+.angular
